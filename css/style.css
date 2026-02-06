@@ -257,6 +257,12 @@ h3{
     justify-content: flex-end;
     flex: 0 1 25%;
 }
+body._lock {
+    overflow: hidden;
+    touch-action: none;
+}
+
+
 .menu-button{
     display: none;
 }

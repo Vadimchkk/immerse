@@ -11,6 +11,21 @@
             document.documentElement.classList.toggle("menu-open");
         });
     }
+    const menuLinks = document.querySelectorAll(".menu__link");
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (iconMenu.classList.contains("_active")) {
+                document.body.classList.remove("_lock");
+                iconMenu.classList.remove("_active");
+                menuBody.classList.remove("_active");
+                document.documentElement.classList.remove("menu-open");
+            }
+        });
+    });
+
+
+    // Flip card
     const cards = document.querySelectorAll('.flip-card');
 
     cards.forEach(card => {
