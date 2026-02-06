@@ -11,7 +11,7 @@
             document.documentElement.classList.toggle("menu-open");
         });
     }
-    const menuLinks = document.querySelectorAll(".menu__link");
+    const menuLinks = document.querySelectorAll('a[href^="#"]');
 
     menuLinks.forEach(link => {
         link.addEventListener("click", () => {
