@@ -37,7 +37,6 @@
         }
 
         card.addEventListener('click', e => {
-            // щоб кліки по email / linkedin працювали
             if (e.target.closest('a')) return;
 
             inner.classList.toggle('flipped');
