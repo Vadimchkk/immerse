@@ -892,8 +892,8 @@ margin-bottom: 30px;
     border-radius: 20px;
 }
 
-@media (hover: hover){
-    .flip-card:hover .flip-card-inner{
+@media (hover: hover) and (pointer: fine){
+    .flip-card:not(.is-touch):hover .flip-card-inner{
         transform: rotateY(180deg);
     }
 }

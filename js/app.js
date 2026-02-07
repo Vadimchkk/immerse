@@ -27,15 +27,24 @@
 
     // Flip card
     const cards = document.querySelectorAll('.flip-card');
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
 
     cards.forEach(card => {
-        card.addEventListener('click', () => {
-            const inner = card.querySelector('.flip-card-inner');
-            inner.classList.toggle('flipped');
+        const inner = card.querySelector('.flip-card-inner');
 
+        if (isTouch) {
+            card.classList.add('is-touch');
+        }
+
+        card.addEventListener('click', e => {
+            // щоб кліки по email / linkedin працювали
+            if (e.target.closest('a')) return;
+
+            inner.classList.toggle('flipped');
             card.classList.add('active');
         });
     });
+
 
     // Animation step-by-step
     const icons = document.querySelectorAll('.advantage-icon');
